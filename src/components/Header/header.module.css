@@ -1,0 +1,28 @@
+.head {
+    background-color: #303030;
+}
+
+.mainrow {
+    padding: 15px;
+}
+.listCounter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+}
+.listCounter>li{
+    list-style: none;
+    padding: 0.5rem;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #222;
+    margin: 0 2px;
+}
+.tog{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: x-large;
+    color: #227c26;
+}
