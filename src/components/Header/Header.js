@@ -15,7 +15,7 @@ export default class Header extends Component {
     this.setState({show:false})
   };
     render() {
-      const { total, doneItemsCount, toDosList, onLoadList } = this.props;
+      const { total, doneItemsCount, toDosList, onLoadList, user, logout } = this.props;
         return (
             <div className={`container-fluid ${styles.head}`}>
                 <div className={`row ${styles.mainrow}`}>
@@ -24,13 +24,20 @@ export default class Header extends Component {
                     </div>
                 </div>
               <div className="row">
-                <div className="col-1">
-                  <i className={`fa fa-bars ${styles.tog}`} aria-hidden="true" onClick={this.togglePopup}/>
-                  <ToDosList show={this.state.show}
-                             toDosList={toDosList}
-                             hide={this.hidePopup}
-                             loadList = {onLoadList}
-                  />
+                <div className={`col ${styles.user}`}>
+                  <div className={styles.tog}>
+                      <div>{`${user} :`}</div>
+                      <i className="fa fa-bars" aria-hidden="true" onClick={this.togglePopup}/>
+                      <ToDosList show={this.state.show}
+                                 toDosList={toDosList}
+                                 hide={this.hidePopup}
+                                 loadList = {onLoadList}
+                                 user = {user}
+                                 logout = {logout}
+                      />
+                  </div>
+
+
                 </div>
 
                 <div className="col">

@@ -4,10 +4,14 @@ import ToDoList from '../ToDoList/ToDoList';
 import AddForm from "../AddForm/AddForm";
 import Api from "../../Api/Api";
 import './App.css';
+import {UserContext} from "../../Context/UserContext";
+import {Link} from "react-router-dom";
 
 
 class App extends React.Component {
   apiConnect = new Api();
+  static contextType = UserContext;
+  userStorage = JSON.parse(localStorage.getItem('user'));
 
   state = {
     toDos:[],
@@ -17,6 +21,9 @@ class App extends React.Component {
       title: '',
       show: false,
       type:''
+    },
+    loggedUser:{
+      name:''
     }
   };
   onToggleDone = (id) => {
@@ -39,13 +46,14 @@ class App extends React.Component {
     toDos.push(toDoItem);
     this.setState({toDos})
   };
-
   onChangeToDoName = (name) => {
     this.setState({toDoName:name})
   };
-  loadSavedLists () {
-    this.apiConnect.loadToDoList().then(
+  loadSavedLists (user) {
+    this.apiConnect.loadToDoList(user).then(
       (data) => {
+        if (data === null) return;
+
         if(this.apiConnect.apiError!==''){
           this.onError(true,this.apiConnect.apiError)
         }
@@ -55,10 +63,11 @@ class App extends React.Component {
 
       });
   }
-   onSave = () => {
+  onSave = () => {
     const body = {
       toDos: [...this.state.toDos],
-      name: this.state.toDoName
+      name: this.state.toDoName,
+      user: this.state.loggedUser.name
     };
    if (body.name !==''){
      this.apiConnect.saveToDo(body).then(() =>{
@@ -67,7 +76,7 @@ class App extends React.Component {
        }
        else {
          this.onSuccess(true,this.apiConnect.apiMsg);
-         this.loadSavedLists()
+         this.loadSavedLists(this.userStorage.nickname)
        }
      })
    }
@@ -92,10 +101,9 @@ class App extends React.Component {
     popup.type = 'Success!';
     this.setState({popup});
     setTimeout(()=>this.closeError(),2500)
-  }
-
-  loadList = (name) => {
-    this.apiConnect.loadList(name).then((json) => {
+  };
+  loadList = (user,name) => {
+    this.apiConnect.loadList(user,name).then((json) => {
       if(this.apiConnect.apiError!==''){
         this.onError(true,this.apiConnect.apiError)
       }
@@ -113,9 +121,21 @@ class App extends React.Component {
     error.show = false;
     this.setState({popup:error})
   };
+  onLogOut = () => {
+    this.context.logIn();
+    localStorage.clear();
+    this.setState({...this.state,loggedUser:{name:''}})
+  };
 
   componentDidMount() {
-    this.loadSavedLists()
+   if(this.context.isLogged || this.userStorage){
+     this.setState(()=> {
+      return {...this.state,loggedUser:{...this.state.loggedUser,name:this.userStorage.nickname}}
+     });
+     this.loadSavedLists(this.userStorage.nickname);
+   }
+
+
   }
 
   render() {
@@ -124,6 +144,18 @@ class App extends React.Component {
     };
 
     const { toDos, toDoName, toDosList, popup } = this.state;
+
+    if(this.state.loggedUser.name === '') {
+      return (
+          <div className='d-flex flex-column justify-content-center align-items-center logIn'>
+            <h3>Please logIn!</h3>
+            <Link to='/'>
+              Go to authorization page
+            </Link>
+          </div>
+      )
+    }
+
     return (
       <>
         <div className='row'>
@@ -131,6 +163,9 @@ class App extends React.Component {
                   doneItemsCount={toDos.filter((el) => el.done === true).length}
                   toDosList={toDosList}
                   onLoadList={this.loadList}
+                  user={this.state.loggedUser.name}
+                  logout = {this.onLogOut}
+
           />
           <ToDoList listItems={toDos}
                     deleteItem={this.onDelete}

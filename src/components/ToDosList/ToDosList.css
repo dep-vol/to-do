@@ -3,14 +3,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  left: 35px;
-  border-radius: 15px;
+  top: 35px;
+  border-radius: 10px;
   z-index: 1000;
+  align-self: center;
+  background: #303030;
+  padding: 10px;
 }
 .mainList>ul {
+  list-style: none;
   width: 26vw;
-
+  margin: 0;
+  padding: 0;
+  background: #22782761;
+  border-radius: 10px;
 }
+.mainList>ul>li {
+  margin: 5px 10px;
+  text-align: center;
+  border-bottom: 1px dotted #222222;
+}
+.mainList>.badge {
+  margin: 5px;
+}
+
 .hidden {
   display: none;
 }

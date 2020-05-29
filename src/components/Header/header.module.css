@@ -25,4 +25,16 @@
     left: 10px;
     font-size: x-large;
     color: #227c26;
+    display: flex;
+}
+.tog>div {
+    font-size: medium;
+    color: white;
+    margin-right: 10px;
+
+}
+.user{
+    display: flex;
+    flex-direction: row;
+
 }

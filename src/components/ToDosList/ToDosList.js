@@ -4,18 +4,20 @@ import './ToDosList.css';
 class ToDosList extends Component {
 
   render() {
-    const { toDosList, hide, loadList } = this.props;
+    const { toDosList, hide, loadList, user, logout } = this.props;
     const hiddenStyle = this.props.show === false ? 'hidden' : '';
     const toDoListItems = toDosList.map((item) => {
       return (
-        <li className="list-group-item" onClick={()=>loadList(item)} key={item}>{item}</li>
+        <li className="" onClick={()=>loadList(user,item)} key={item}>{item}</li>
       )
     });
     return (
       <div className={`mainList ${hiddenStyle}`} onMouseLeave={hide}>
-        <ul className="list-group">
+        <h5 className="text-center">Saved lists:</h5>
+        <ul>
           {toDoListItems}
         </ul>
+        <span className="badge  badge-primary" onClick={logout}>Log out</span>
       </div>
 
     );
