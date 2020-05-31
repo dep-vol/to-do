@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/to-do-vanila-React/static/css/main.5d59cf50.chunk.css",
+    "main.js": "/to-do-vanila-React/static/js/main.e47286b6.chunk.js",
+    "main.js.map": "/to-do-vanila-React/static/js/main.e47286b6.chunk.js.map",
+    "runtime-main.js": "/to-do-vanila-React/static/js/runtime-main.0219928b.js",
+    "runtime-main.js.map": "/to-do-vanila-React/static/js/runtime-main.0219928b.js.map",
+    "static/js/2.2df73a19.chunk.js": "/to-do-vanila-React/static/js/2.2df73a19.chunk.js",
+    "static/js/2.2df73a19.chunk.js.map": "/to-do-vanila-React/static/js/2.2df73a19.chunk.js.map",
+    "index.html": "/to-do-vanila-React/index.html",
+    "precache-manifest.de3774ca2148133cd8ecd99f54b54080.js": "/to-do-vanila-React/precache-manifest.de3774ca2148133cd8ecd99f54b54080.js",
+    "service-worker.js": "/to-do-vanila-React/service-worker.js",
+    "static/css/main.5d59cf50.chunk.css.map": "/to-do-vanila-React/static/css/main.5d59cf50.chunk.css.map",
+    "static/js/2.2df73a19.chunk.js.LICENSE.txt": "/to-do-vanila-React/static/js/2.2df73a19.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0219928b.js",
+    "static/js/2.2df73a19.chunk.js",
+    "static/css/main.5d59cf50.chunk.css",
+    "static/js/main.e47286b6.chunk.js"
+  ]
+}
