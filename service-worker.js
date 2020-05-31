@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/to-do-vanila-React/precache-manifest.ffe01796cc93b1f24f41892d8105a659.js"
+  "/to-do-vanila-React/precache-manifest.d3b0893ab24323b98a54cff2abde0c43.js"
 );
 
 self.addEventListener('message', (event) => {

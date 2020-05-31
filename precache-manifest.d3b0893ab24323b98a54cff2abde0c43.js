@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "756211c60815b9fe8c67035a9f01d8cf",
+    "revision": "6cbb3d142dff3d77d8be20e8a8241b9f",
     "url": "/to-do-vanila-React/index.html"
   },
   {
-    "revision": "92e21aa5264465961c10",
+    "revision": "f6f45876b5a63b8827fb",
     "url": "/to-do-vanila-React/static/css/main.5d59cf50.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/to-do-vanila-React/static/js/2.73fd0ea7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "92e21aa5264465961c10",
-    "url": "/to-do-vanila-React/static/js/main.977f9f4f.chunk.js"
+    "revision": "f6f45876b5a63b8827fb",
+    "url": "/to-do-vanila-React/static/js/main.aa2cec5b.chunk.js"
   },
   {
     "revision": "2086f2597421d050ea6d",
