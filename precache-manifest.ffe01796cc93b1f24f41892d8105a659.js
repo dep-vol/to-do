@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d91675e0bcdaa1ecc2154b42cd201108",
+    "revision": "756211c60815b9fe8c67035a9f01d8cf",
     "url": "/to-do-vanila-React/index.html"
   },
   {
-    "revision": "a2bb98051290e0a376c8",
+    "revision": "92e21aa5264465961c10",
     "url": "/to-do-vanila-React/static/css/main.5d59cf50.chunk.css"
   },
   {
-    "revision": "d4053d3633d76fa971d1",
-    "url": "/to-do-vanila-React/static/js/2.2df73a19.chunk.js"
+    "revision": "9b87aa21d0fa4a7ee84f",
+    "url": "/to-do-vanila-React/static/js/2.73fd0ea7.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/to-do-vanila-React/static/js/2.2df73a19.chunk.js.LICENSE.txt"
+    "url": "/to-do-vanila-React/static/js/2.73fd0ea7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a2bb98051290e0a376c8",
-    "url": "/to-do-vanila-React/static/js/main.e47286b6.chunk.js"
+    "revision": "92e21aa5264465961c10",
+    "url": "/to-do-vanila-React/static/js/main.977f9f4f.chunk.js"
   },
   {
     "revision": "2086f2597421d050ea6d",
