@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/to-do-vanila-React/static/css/main.5d59cf50.chunk.css",
-    "main.js": "/to-do-vanila-React/static/js/main.aa2cec5b.chunk.js",
-    "main.js.map": "/to-do-vanila-React/static/js/main.aa2cec5b.chunk.js.map",
+    "main.js": "/to-do-vanila-React/static/js/main.ecc664b0.chunk.js",
+    "main.js.map": "/to-do-vanila-React/static/js/main.ecc664b0.chunk.js.map",
     "runtime-main.js": "/to-do-vanila-React/static/js/runtime-main.0219928b.js",
     "runtime-main.js.map": "/to-do-vanila-React/static/js/runtime-main.0219928b.js.map",
-    "static/js/2.73fd0ea7.chunk.js": "/to-do-vanila-React/static/js/2.73fd0ea7.chunk.js",
-    "static/js/2.73fd0ea7.chunk.js.map": "/to-do-vanila-React/static/js/2.73fd0ea7.chunk.js.map",
+    "static/js/2.5610391a.chunk.js": "/to-do-vanila-React/static/js/2.5610391a.chunk.js",
+    "static/js/2.5610391a.chunk.js.map": "/to-do-vanila-React/static/js/2.5610391a.chunk.js.map",
     "index.html": "/to-do-vanila-React/index.html",
-    "precache-manifest.d3b0893ab24323b98a54cff2abde0c43.js": "/to-do-vanila-React/precache-manifest.d3b0893ab24323b98a54cff2abde0c43.js",
+    "precache-manifest.c252c8e8f5f71dd8a8311d7e54f6c0f7.js": "/to-do-vanila-React/precache-manifest.c252c8e8f5f71dd8a8311d7e54f6c0f7.js",
     "service-worker.js": "/to-do-vanila-React/service-worker.js",
     "static/css/main.5d59cf50.chunk.css.map": "/to-do-vanila-React/static/css/main.5d59cf50.chunk.css.map",
-    "static/js/2.73fd0ea7.chunk.js.LICENSE.txt": "/to-do-vanila-React/static/js/2.73fd0ea7.chunk.js.LICENSE.txt"
+    "static/js/2.5610391a.chunk.js.LICENSE.txt": "/to-do-vanila-React/static/js/2.5610391a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0219928b.js",
-    "static/js/2.73fd0ea7.chunk.js",
+    "static/js/2.5610391a.chunk.js",
     "static/css/main.5d59cf50.chunk.css",
-    "static/js/main.aa2cec5b.chunk.js"
+    "static/js/main.ecc664b0.chunk.js"
   ]
 }
